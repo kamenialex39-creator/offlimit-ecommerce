@@ -1,5 +1,6 @@
 /* =========================================================
-   OFFLIMIT — PREMIUM STREETWEAR SYSTEM
+   OFFLIMIT — PREMIUM STREETWEAR
+   COMPLETE STYLESHEET
    ========================================================= */
 
 * {
@@ -39,11 +40,12 @@ button {
 
 
 /* =========================================================
-   ANNOUNCEMENT
+   ANNOUNCEMENT BAR
    ========================================================= */
 
 .announcement {
   height: 30px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,8 +55,10 @@ button {
   border-bottom: 1px solid #191919;
 
   color: #777;
+
   font-size: 9px;
   font-weight: 500;
+
   letter-spacing: .18em;
   text-transform: uppercase;
 }
@@ -86,6 +90,9 @@ button {
   backdrop-filter: blur(12px);
 }
 
+
+/* Brand */
+
 .brand {
   display: flex;
   align-items: center;
@@ -96,6 +103,7 @@ button {
   width: 132px;
   height: auto;
   max-height: 48px;
+
   object-fit: contain;
 }
 
@@ -105,6 +113,7 @@ button {
 .desktop-nav {
   display: flex;
   align-items: center;
+
   gap: 38px;
 
   margin-left: auto;
@@ -118,6 +127,7 @@ button {
 
   font-size: 10px;
   font-weight: 600;
+
   letter-spacing: .13em;
   text-transform: uppercase;
 
@@ -133,6 +143,7 @@ button {
   content: "";
 
   position: absolute;
+
   left: 0;
   bottom: -12px;
 
@@ -143,7 +154,7 @@ button {
 }
 
 
-/* Header icons */
+/* Header actions */
 
 .header-actions {
   display: flex;
@@ -194,6 +205,7 @@ button {
   background: currentColor;
 
   position: absolute;
+
   right: -5px;
   bottom: -2px;
 
@@ -231,7 +243,7 @@ button {
 }
 
 
-/* Bag icon */
+/* Shopping bag */
 
 .icon-bag {
   width: 13px;
@@ -258,6 +270,9 @@ button {
 
   border-radius: 5px 5px 0 0;
 }
+
+
+/* Cart counter */
 
 .cart-btn span:last-child {
   position: absolute;
@@ -296,6 +311,7 @@ button {
 
   flex-direction: column;
   justify-content: center;
+
   gap: 4px;
 }
 
@@ -328,7 +344,7 @@ button {
 }
 
 
-/* Cinematic background */
+/* Background */
 
 .hero-media {
   position: absolute;
@@ -382,7 +398,7 @@ button {
 }
 
 
-/* Vignette */
+/* Overlay */
 
 .hero-overlay {
   position: absolute;
@@ -422,6 +438,7 @@ button {
   font-weight: 600;
 
   letter-spacing: .48em;
+
   text-transform: uppercase;
 }
 
@@ -434,6 +451,7 @@ button {
   font-weight: 900;
 
   line-height: .83;
+
   letter-spacing: -.065em;
 
   text-transform: uppercase;
@@ -449,7 +467,6 @@ button {
   letter-spacing: -.07em;
 }
 
-
 .hero-description {
   max-width: 570px;
 
@@ -458,13 +475,14 @@ button {
   color: #a9a9a9;
 
   font-size: 11px !important;
+
   line-height: 1.8;
 
   letter-spacing: .22em !important;
 }
 
 
-/* CTA */
+/* Hero button */
 
 .hero-btn {
   min-width: 160px;
@@ -491,6 +509,7 @@ button {
 
 .hero-btn:hover {
   background: #fff;
+
   transform: translateY(-2px);
 }
 
@@ -500,7 +519,7 @@ button {
 }
 
 
-/* Left information */
+/* Hero side information */
 
 .hero-left,
 .hero-right {
@@ -519,12 +538,14 @@ button {
 
 .hero-right {
   right: 4vw;
+
   text-align: right;
 }
 
 .hero-side-label {
   display: flex;
   align-items: center;
+
   gap: 10px;
 
   color: #aaa;
@@ -553,7 +574,7 @@ button {
 }
 
 
-/* Right panel */
+/* Hero right feature */
 
 .hero-feature {
   display: flex;
@@ -618,6 +639,7 @@ button {
 
 .hero-pagination {
   display: flex;
+
   gap: 18px;
 }
 
@@ -625,6 +647,7 @@ button {
   color: #555;
 
   font-size: 9px;
+
   letter-spacing: .12em;
 }
 
@@ -650,11 +673,13 @@ button {
 .hero-scroll {
   display: flex;
   align-items: center;
+
   gap: 13px;
 
   color: #777;
 
   font-size: 8px;
+
   letter-spacing: .2em;
 }
 
@@ -671,63 +696,139 @@ button {
    ========================================================= */
 
 .collections {
+  width: 100%;
+  max-width: none;
+
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
 
   gap: 1px;
 
-  background: #242424;
+  background: #292929;
 
-  border-top: 1px solid #242424;
-  border-bottom: 1px solid #242424;
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
 }
 
 .collection-card {
-  height: 330px;
+  height: 440px;
 
   position: relative;
+
   overflow: hidden;
 
   background: #111;
+
+  isolation: isolate;
 }
+
+
+/* Collection visual */
 
 .collection-img {
   position: absolute;
   inset: 0;
 
-  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+  transform: scale(1);
+
+  transition:
+    transform .8s cubic-bezier(.2,.7,.2,1),
+    filter .5s ease;
 }
 
 .collection-card:hover .collection-img {
-  transform: scale(1.06);
+  transform: scale(1.08);
+
+  filter: brightness(1.12);
 }
 
 
-/* Temporary editorial backgrounds */
+/* Collection backgrounds */
 
 .c1 {
   background:
-    radial-gradient(circle at 60% 30%, #555, transparent 30%),
-    linear-gradient(145deg, #090909, #292929);
+    radial-gradient(
+      ellipse at 52% 35%,
+      rgba(125,125,125,.42),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #080808 0%,
+      #191919 48%,
+      #383838 100%
+    );
 }
 
 .c2 {
   background:
-    radial-gradient(circle at 40% 35%, #707070, transparent 26%),
-    linear-gradient(145deg, #181818, #414141);
+    radial-gradient(
+      ellipse at 42% 30%,
+      rgba(155,155,155,.38),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #151515 0%,
+      #292929 50%,
+      #575757 100%
+    );
 }
 
 .c3 {
   background:
-    radial-gradient(circle at 65% 40%, #444, transparent 25%),
-    linear-gradient(145deg, #0b0b0b, #242424);
+    radial-gradient(
+      ellipse at 65% 42%,
+      rgba(105,105,105,.32),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #090909 0%,
+      #151515 52%,
+      #303030 100%
+    );
 }
 
 .c4 {
   background:
-    radial-gradient(circle at 45% 30%, #555, transparent 20%),
-    linear-gradient(145deg, #070707, #303030);
+    radial-gradient(
+      ellipse at 45% 30%,
+      rgba(135,135,135,.35),
+      transparent 26%
+    ),
+    linear-gradient(
+      135deg,
+      #070707 0%,
+      #1b1b1b 55%,
+      #3c3c3c 100%
+    );
 }
+
+
+/* Texture */
+
+.collection-img::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  opacity: .25;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,.025) 0,
+      rgba(255,255,255,.025) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+}
+
+
+/* Collection gradient */
 
 .collection-card::after {
   content: "";
@@ -735,52 +836,102 @@ button {
   position: absolute;
   inset: 0;
 
+  z-index: 1;
+
   background:
     linear-gradient(
+      to bottom,
       transparent 25%,
-      rgba(0,0,0,.8) 100%
+      rgba(0,0,0,.08) 42%,
+      rgba(0,0,0,.88) 100%
     );
 }
+
+
+/* Red hover line */
+
+.collection-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  z-index: 5;
+
+  background: #e31b2f;
+
+  transition: width .5s ease;
+}
+
+.collection-card:hover::before {
+  width: 100%;
+}
+
+
+/* Collection text */
 
 .collection-content {
   position: absolute;
 
-  left: 25px;
-  right: 25px;
-  bottom: 24px;
+  left: 30px;
+  right: 30px;
+  bottom: 29px;
 
-  z-index: 2;
+  z-index: 3;
 }
 
-.collection-content span {
+.collection-content > span {
+  display: block;
+
+  margin-bottom: 12px;
+
   color: #e31b2f;
 
   font-size: 8px;
-  letter-spacing: .15em;
+  font-weight: 600;
+
+  letter-spacing: .18em;
 }
 
 .collection-content h3 {
-  margin: 9px 0 13px;
+  margin: 0 0 16px;
 
   color: #fff;
 
-  font-size: 20px;
-  font-weight: 700;
+  font-size: clamp(21px, 2vw, 29px);
+  font-weight: 800;
 
-  letter-spacing: .04em;
+  line-height: 1;
+
+  letter-spacing: -.02em;
 }
 
 .collection-content strong {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
   color: #aaa;
 
   font-size: 8px;
-  letter-spacing: .17em;
+  font-weight: 600;
 
-  transition: color .2s ease;
+  letter-spacing: .18em;
+
+  transition:
+    color .25s ease,
+    gap .25s ease;
 }
 
 .collection-card:hover .collection-content strong {
   color: #fff;
+  gap: 15px;
 }
 
 
@@ -805,6 +956,7 @@ button {
 .section-head > div {
   display: flex;
   flex-direction: column;
+
   gap: 8px;
 }
 
@@ -814,6 +966,7 @@ button {
   color: #e31b2f;
 
   font-size: 8px;
+
   letter-spacing: .22em;
 }
 
@@ -830,6 +983,7 @@ button {
   color: #aaa;
 
   font-size: 8px;
+
   letter-spacing: .18em;
 }
 
@@ -838,10 +992,11 @@ button {
 }
 
 
-/* Filters */
+/* Product filters */
 
 .filter-row {
   display: flex;
+
   gap: 7px;
 
   margin: 22px 0 27px;
@@ -856,6 +1011,7 @@ button {
   color: #777;
 
   font-size: 8px;
+
   letter-spacing: .12em;
 
   text-transform: uppercase;
@@ -863,11 +1019,13 @@ button {
 
 .filter:hover {
   color: #fff;
+
   border-color: #555;
 }
 
 .filter.active {
   background: #f2f2f2;
+
   color: #080808;
 
   border-color: #f2f2f2;
@@ -878,6 +1036,7 @@ button {
 
 .product-grid {
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
 
   gap: 12px;
@@ -887,6 +1046,7 @@ button {
   position: relative;
 
   background: #0c0c0c;
+
   border: 1px solid #1e1e1e;
 
   transition:
@@ -896,11 +1056,13 @@ button {
 
 .product:hover {
   transform: translateY(-5px);
+
   border-color: #444;
 }
 
 .product-img {
   width: 100%;
+
   aspect-ratio: 1 / 1.18;
 
   display: block;
@@ -929,6 +1091,7 @@ button {
 
 .dots {
   display: flex;
+
   gap: 5px;
 
   margin-top: 12px;
@@ -939,11 +1102,13 @@ button {
   height: 8px;
 
   border: 1px solid #666;
+
   border-radius: 50%;
 }
 
 .dot.red {
   background: #e31b2f;
+
   border-color: #e31b2f;
 }
 
@@ -956,6 +1121,7 @@ button {
   min-height: 650px;
 
   position: relative;
+
   overflow: hidden;
 
   display: flex;
@@ -987,6 +1153,7 @@ button {
 
 .story-copy {
   position: relative;
+
   z-index: 2;
 
   width: min(520px, 45vw);
@@ -998,6 +1165,7 @@ button {
   color: #e31b2f;
 
   font-size: 9px;
+
   letter-spacing: .2em;
 }
 
@@ -1005,7 +1173,9 @@ button {
   margin: 20px 0;
 
   font-size: clamp(42px, 5vw, 70px);
+
   line-height: .9;
+
   letter-spacing: -.055em;
 }
 
@@ -1015,6 +1185,7 @@ button {
   color: #999;
 
   font-size: 12px;
+
   line-height: 1.8;
 }
 
@@ -1048,6 +1219,7 @@ button {
 
 .manifesto {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
   border-bottom: 1px solid #222;
@@ -1069,6 +1241,7 @@ button {
   color: #e31b2f;
 
   font-size: 9px;
+
   letter-spacing: .12em;
 }
 
@@ -1076,6 +1249,7 @@ button {
   margin: 18px 0 10px;
 
   font-size: 15px;
+
   letter-spacing: .15em;
 }
 
@@ -1085,6 +1259,7 @@ button {
   color: #777;
 
   font-size: 10px;
+
   line-height: 1.7;
 }
 
@@ -1101,6 +1276,7 @@ button {
   height: 570px;
 
   position: relative;
+
   overflow: hidden;
 
   background: #111;
@@ -1134,6 +1310,7 @@ button {
 
   display: flex;
   flex-direction: column;
+
   align-items: flex-start;
   justify-content: center;
 }
@@ -1142,6 +1319,7 @@ button {
   color: #e31b2f;
 
   font-size: 8px;
+
   letter-spacing: .2em;
 }
 
@@ -1149,7 +1327,9 @@ button {
   margin: 17px 0 35px;
 
   font-size: clamp(50px, 7vw, 90px);
+
   line-height: .82;
+
   letter-spacing: -.06em;
 }
 
@@ -1163,9 +1343,11 @@ button {
   margin-bottom: 24px;
 
   border: 1px solid rgba(255,255,255,.6);
+
   border-radius: 50%;
 
   background: rgba(0,0,0,.2);
+
   color: #fff;
 
   font-size: 13px;
@@ -1175,6 +1357,7 @@ button {
 
 .lookbook-play:hover {
   background: #fff;
+
   color: #000;
 }
 
@@ -1206,6 +1389,7 @@ button {
 
 .social-grid {
   display: grid;
+
   grid-template-columns: repeat(6, 1fr);
 
   gap: 5px;
@@ -1250,6 +1434,7 @@ button {
 
 .subscribe {
   background: #eee;
+
   color: #080808;
 
   padding: 105px 20px;
@@ -1278,6 +1463,7 @@ button {
   margin: 0;
 
   font-size: clamp(40px, 6vw, 70px);
+
   line-height: .9;
 
   letter-spacing: -.055em;
@@ -1291,6 +1477,7 @@ button {
   color: #666;
 
   font-size: 11px;
+
   line-height: 1.7;
 }
 
@@ -1312,6 +1499,7 @@ button {
   padding: 0;
 
   border: 0;
+
   outline: 0;
 
   background: transparent;
@@ -1319,6 +1507,7 @@ button {
   color: #080808;
 
   font-size: 10px;
+
   letter-spacing: .12em;
 }
 
@@ -1374,6 +1563,7 @@ footer {
 
 .footer-brand img {
   width: 145px;
+
   max-height: 55px;
 
   object-fit: contain;
@@ -1384,6 +1574,7 @@ footer p {
   color: #666;
 
   font-size: 8px;
+
   line-height: 1.7;
 
   letter-spacing: .15em;
@@ -1439,6 +1630,7 @@ footer p {
   outline: 0;
 
   font-size: 9px;
+
   letter-spacing: .1em;
 }
 
@@ -1448,6 +1640,7 @@ footer p {
   border: 0;
 
   background: #eee;
+
   color: #111;
 
   font-size: 15px;
@@ -1476,6 +1669,7 @@ footer p {
 
 .drawer-backdrop {
   position: fixed;
+
   inset: 0;
 
   background: rgba(0,0,0,.72);
@@ -1508,7 +1702,8 @@ footer p {
 
   z-index: 201;
 
-  transition: right .35s cubic-bezier(.2,.7,.2,1);
+  transition:
+    right .35s cubic-bezier(.2,.7,.2,1);
 }
 
 .drawer.open {
@@ -1529,12 +1724,14 @@ footer p {
   margin: 0;
 
   font-size: 13px;
+
   letter-spacing: .13em;
 }
 
 .drawer-head button,
 .modal-close {
   border: 0;
+
   background: transparent;
 
   color: #fff;
@@ -1544,6 +1741,7 @@ footer p {
 
 .cart-item {
   display: grid;
+
   grid-template-columns: 80px 1fr auto;
 
   gap: 13px;
@@ -1576,6 +1774,7 @@ footer p {
 
 .remove {
   border: 0;
+
   background: transparent;
 
   color: #666;
@@ -1583,11 +1782,13 @@ footer p {
 
 .cart-total {
   display: flex;
+
   justify-content: space-between;
 
   padding: 25px 0;
 
   font-size: 11px;
+
   letter-spacing: .12em;
 }
 
@@ -1599,6 +1800,7 @@ footer p {
   border: 0;
 
   background: #eee;
+
   color: #080808;
 
   font-size: 9px;
@@ -1611,6 +1813,7 @@ footer p {
   color: #555;
 
   font-size: 9px;
+
   line-height: 1.7;
 }
 
@@ -1621,6 +1824,7 @@ footer p {
 
 .modal {
   position: fixed;
+
   inset: 0;
 
   z-index: 300;
@@ -1643,6 +1847,7 @@ footer p {
   position: relative;
 
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 
   background: #0d0d0d;
@@ -1684,6 +1889,7 @@ footer p {
   color: #777;
 
   font-size: 11px;
+
   line-height: 1.8;
 }
 
@@ -1702,6 +1908,7 @@ footer p {
   border: 1px solid #3b3b3b;
 
   background: #101010;
+
   color: #fff;
 
   font-size: 10px;
@@ -1709,18 +1916,20 @@ footer p {
 
 .sizes button.selected {
   background: #eee;
+
   color: #111;
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE — TABLET
    ========================================================= */
 
 @media (max-width: 1100px) {
 
   .desktop-nav {
     gap: 25px;
+
     margin-right: 35px;
   }
 
@@ -1740,8 +1949,8 @@ footer p {
     right: 3vw;
   }
 
-  .collections {
-    grid-template-columns: repeat(2, 1fr);
+  .collection-card {
+    height: 390px;
   }
 
   .product-grid {
@@ -1753,7 +1962,11 @@ footer p {
   }
 
   .footer-top {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns:
+      1.5fr
+      1fr
+      1fr
+      1fr;
   }
 
   .newsletter {
@@ -1761,6 +1974,10 @@ footer p {
   }
 }
 
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
 
 @media (max-width: 800px) {
 
@@ -1774,6 +1991,7 @@ footer p {
 
   .header-actions {
     margin-left: auto;
+
     margin-right: 15px;
   }
 
@@ -1781,8 +1999,12 @@ footer p {
     display: flex;
   }
 
+
+  /* Hero */
+
   .hero {
     min-height: 610px;
+
     height: 610px;
   }
 
@@ -1801,6 +2023,7 @@ footer p {
 
   .hero-description {
     font-size: 9px !important;
+
     letter-spacing: .16em !important;
   }
 
@@ -1813,9 +2036,26 @@ footer p {
     display: none;
   }
 
+
+  /* Collections */
+
+  .collections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collection-card {
+    height: 350px;
+  }
+
+
+  /* Products */
+
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+
+  /* Story */
 
   .story {
     min-height: 570px;
@@ -1823,14 +2063,20 @@ footer p {
 
   .story-copy {
     width: 75vw;
+
     margin-left: 7vw;
   }
 
   .story-symbol {
     right: 3vw;
+
     width: 170px;
+
     opacity: .25;
   }
+
+
+  /* Manifesto */
 
   .manifesto {
     grid-template-columns: 1fr;
@@ -1838,8 +2084,12 @@ footer p {
 
   .manifesto > div {
     border-right: 0;
+
     border-bottom: 1px solid #222;
   }
+
+
+  /* Lookbook */
 
   .lookbook-main {
     height: 500px;
@@ -1849,6 +2099,9 @@ footer p {
     padding: 40px;
   }
 
+
+  /* Footer */
+
   .footer-top {
     grid-template-columns: 1fr 1fr;
   }
@@ -1857,6 +2110,9 @@ footer p {
   .newsletter {
     grid-column: 1 / -1;
   }
+
+
+  /* Modal */
 
   .modal-inner {
     grid-template-columns: 1fr;
@@ -1868,12 +2124,17 @@ footer p {
 }
 
 
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
 @media (max-width: 520px) {
 
   .announcement {
     height: 27px;
 
     font-size: 7px;
+
     letter-spacing: .1em;
 
     gap: 8px;
@@ -1882,6 +2143,9 @@ footer p {
   .announcement-divider {
     display: none;
   }
+
+
+  /* Header */
 
   .site-header {
     height: 62px;
@@ -1897,8 +2161,12 @@ footer p {
     gap: 13px;
   }
 
+
+  /* Hero */
+
   .hero {
     min-height: 550px;
+
     height: 550px;
   }
 
@@ -1920,11 +2188,13 @@ footer p {
     margin: 24px auto 27px !important;
 
     font-size: 8px !important;
+
     line-height: 1.8;
   }
 
   .hero-btn {
     min-width: 145px;
+
     padding: 15px 20px;
   }
 
@@ -1932,23 +2202,40 @@ footer p {
     gap: 12px;
   }
 
+
+  /* Collections */
+
   .collections {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .collection-card {
-    height: 200px;
+    height: 235px;
   }
 
   .collection-content {
-    left: 15px;
-    right: 15px;
-    bottom: 18px;
+    left: 17px;
+    right: 17px;
+
+    bottom: 19px;
+  }
+
+  .collection-content > span {
+    margin-bottom: 8px;
   }
 
   .collection-content h3 {
-    font-size: 14px;
+    margin-bottom: 10px;
+
+    font-size: 15px;
   }
+
+  .collection-content strong {
+    font-size: 7px;
+  }
+
+
+  /* Products */
 
   .products {
     padding: 65px 0;
@@ -1964,6 +2251,7 @@ footer p {
 
   .filter-row {
     overflow-x: auto;
+
     padding-bottom: 4px;
   }
 
@@ -1973,6 +2261,7 @@ footer p {
 
   .product-grid {
     grid-template-columns: 1fr 1fr;
+
     gap: 7px;
   }
 
@@ -1984,12 +2273,16 @@ footer p {
     font-size: 9px;
   }
 
+
+  /* Story */
+
   .story {
     min-height: 500px;
   }
 
   .story-copy {
     width: 80vw;
+
     margin-left: 7vw;
   }
 
@@ -2001,9 +2294,15 @@ footer p {
     width: 110px;
   }
 
+
+  /* Manifesto */
+
   .manifesto > div {
     padding: 42px 25px;
   }
+
+
+  /* Lookbook */
 
   .lookbook {
     padding: 65px 0;
@@ -2021,6 +2320,9 @@ footer p {
     font-size: 55px;
   }
 
+
+  /* Social */
+
   .social {
     padding-bottom: 70px;
   }
@@ -2033,6 +2335,9 @@ footer p {
     height: 145px;
   }
 
+
+  /* Subscribe */
+
   .subscribe {
     padding: 75px 20px;
   }
@@ -2041,21 +2346,29 @@ footer p {
     font-size: 46px;
   }
 
+
+  /* Footer */
+
   .footer-top {
     grid-template-columns: 1fr 1fr;
 
     gap: 30px;
+
     padding: 60px 0;
   }
 
   .footer-bottom {
     align-items: flex-start;
+
     flex-direction: column;
 
     gap: 10px;
 
     padding: 18px 0;
   }
+
+
+  /* Modal */
 
   .modal-inner > img {
     height: 250px;
