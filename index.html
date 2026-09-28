@@ -3,122 +3,717 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Offlimit — Unbound. Unapologetic. Different.</title>
-  <meta name="description" content="OFFLIMIT streetwear. Clothing for people who move different.">
+  <title>OFFLIMIT — Beyond Limits.</title>
+
+  <meta
+    name="description"
+    content="OFFLIMIT — Streetwear for the ones who move different."
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=UnifrakturCook:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="announcement">FREE SHIPPING ON ORDERS OVER $100 <span>|</span> WORLDWIDE SHIPPING</div>
 
+<body>
+
+  <!-- =========================
+       ANNOUNCEMENT BAR
+  ========================== -->
+  <div class="announcement">
+    <span>FREE SHIPPING ON ORDERS OVER $100</span>
+    <span class="announcement-divider">|</span>
+    <span>WORLDWIDE SHIPPING</span>
+  </div>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
   <header class="site-header">
+
     <a class="brand" href="#home" aria-label="Offlimit home">
-      <img src="offlimit-wordmark.png" alt="Offlimit">
+      <img src="offlimit-wordmark.png" alt="OFFLIMIT">
     </a>
-    <nav class="desktop-nav">
+
+    <nav class="desktop-nav" aria-label="Main navigation">
       <a class="active" href="#home">Home</a>
       <a href="#shop">Shop</a>
       <a href="#collections">Collections</a>
+      <a href="#lookbook">Lookbook</a>
       <a href="#story">About</a>
-      <a href="#contact">Contact</a>
     </nav>
+
     <div class="header-actions">
-      <button aria-label="Search" data-action="search">⌕</button>
-      <button aria-label="Account" data-action="account">♙</button>
-      <button class="cart-btn" aria-label="Cart" data-action="cart">♧<span id="cartCount">0</span></button>
+
+      <button
+        type="button"
+        aria-label="Search"
+        data-action="search"
+        class="icon-btn"
+      >
+        <span class="icon-search"></span>
+      </button>
+
+      <button
+        type="button"
+        aria-label="Account"
+        data-action="account"
+        class="icon-btn"
+      >
+        <span class="icon-account"></span>
+      </button>
+
+      <button
+        type="button"
+        aria-label="Shopping cart"
+        data-action="cart"
+        class="cart-btn icon-btn"
+      >
+        <span class="icon-bag"></span>
+        <span id="cartCount">0</span>
+      </button>
+
     </div>
-    <button class="menu-btn" aria-label="Open menu">☰</button>
+
+    <button
+      class="menu-btn"
+      type="button"
+      aria-label="Open navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
   </header>
 
+
+  <!-- =========================
+       MAIN
+  ========================== -->
   <main id="home">
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
     <section class="hero">
+
+      <!-- Background image layer -->
       <div class="hero-media"></div>
+
+      <!-- Dark cinematic overlay -->
       <div class="hero-overlay"></div>
+
+      <!-- Left information -->
       <div class="hero-left">
-        <p class="eyebrow red">MORE<br>THAN<br>CLOTHING</p>
-        <span class="hero-index">01</span>
-        <p class="micro">A DIFFERENT<br>STATE OF MIND</p>
+
+        <div class="hero-side-label">
+          <span class="red">01</span>
+          <span>COLLECTION</span>
+        </div>
+
+        <div class="hero-vertical-text">
+          MOVE<br>
+          DIFFERENT
+        </div>
+
       </div>
+
+
+      <!-- Main hero content -->
       <div class="hero-center">
-        <img src="offlimit-wordmark.png" class="hero-logo" alt="Offlimit">
-        <p>UNBOUND. UNAPOLOGETIC. DIFFERENT.</p>
-        <a class="btn" href="#shop">SHOP NOW <span>→</span></a>
+
+        <p class="hero-kicker">
+          BEYOND LIMITS
+        </p>
+
+        <h1>
+          OFFLIMIT
+          <span>CLOTHING</span>
+        </h1>
+
+        <p class="hero-description">
+          Streetwear for the ones who move different.
+          Quality. Identity. No limits.
+        </p>
+
+        <a class="btn hero-btn" href="#shop">
+          SHOP NOW
+          <span>→</span>
+        </a>
+
       </div>
+
+
+      <!-- Right collection panel -->
       <div class="hero-right">
-        <p>CLOTHING<br>PEOPLE<br>CULTURE<br>FREEDOM</p>
+
+        <div class="hero-feature">
+
+          <span class="hero-feature-label">
+            NEW COLLECTION
+          </span>
+
+          <strong>
+            FALL '26
+          </strong>
+
+          <a href="#collections">
+            EXPLORE
+            <span>↗</span>
+          </a>
+
+        </div>
+
       </div>
+
+
+      <!-- Hero bottom -->
+      <div class="hero-bottom">
+
+        <div class="hero-pagination">
+          <span class="active">01</span>
+          <span>02</span>
+          <span>03</span>
+        </div>
+
+        <div class="hero-scroll">
+          <span>SCROLL TO EXPLORE</span>
+          <span class="scroll-line"></span>
+        </div>
+
+      </div>
+
     </section>
 
+
+    <!-- =========================
+         COLLECTIONS
+    ========================== -->
     <section class="collections wrap" id="collections">
-      <a class="collection-card" href="#shop" data-filter="Hoodies"><div class="collection-img c1"></div><h3>HOODIES</h3><span>SHOP NOW →</span></a>
-      <a class="collection-card" href="#shop" data-filter="T-Shirts"><div class="collection-img c2"></div><h3>T-SHIRTS</h3><span>SHOP NOW →</span></a>
-      <a class="collection-card" href="#shop" data-filter="Pants"><div class="collection-img c3"></div><h3>PANTS</h3><span>SHOP NOW →</span></a>
-      <a class="collection-card" href="#shop" data-filter="Accessories"><div class="collection-img c4"></div><h3>ACCESSORIES</h3><span>SHOP NOW →</span></a>
+
+      <a
+        class="collection-card"
+        href="#shop"
+        data-filter="Hoodies"
+      >
+        <div class="collection-img c1"></div>
+        <div class="collection-content">
+          <span>01</span>
+          <h3>HOODIES</h3>
+          <strong>SHOP NOW →</strong>
+        </div>
+      </a>
+
+      <a
+        class="collection-card"
+        href="#shop"
+        data-filter="T-Shirts"
+      >
+        <div class="collection-img c2"></div>
+        <div class="collection-content">
+          <span>02</span>
+          <h3>TEES</h3>
+          <strong>SHOP NOW →</strong>
+        </div>
+      </a>
+
+      <a
+        class="collection-card"
+        href="#shop"
+        data-filter="Pants"
+      >
+        <div class="collection-img c3"></div>
+        <div class="collection-content">
+          <span>03</span>
+          <h3>BOTTOMS</h3>
+          <strong>SHOP NOW →</strong>
+        </div>
+      </a>
+
+      <a
+        class="collection-card"
+        href="#shop"
+        data-filter="Accessories"
+      >
+        <div class="collection-img c4"></div>
+        <div class="collection-content">
+          <span>04</span>
+          <h3>ACCESSORIES</h3>
+          <strong>SHOP NOW →</strong>
+        </div>
+      </a>
+
     </section>
 
+
+    <!-- =========================
+         FEATURED PRODUCTS
+    ========================== -->
     <section class="products wrap" id="shop">
-      <div class="section-head"><h2>FEATURED PRODUCTS</h2><a href="#shop">VIEW ALL →</a></div>
+
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">OFFLIMIT / 001</p>
+          <h2>FEATURED COLLECTION</h2>
+        </div>
+
+        <a href="#shop">VIEW ALL →</a>
+      </div>
+
       <div class="filter-row">
-        <button class="filter active" data-filter="All">All</button>
-        <button class="filter" data-filter="Hoodies">Hoodies</button>
-        <button class="filter" data-filter="T-Shirts">T-Shirts</button>
-        <button class="filter" data-filter="Pants">Pants</button>
-        <button class="filter" data-filter="Accessories">Accessories</button>
+
+        <button class="filter active" data-filter="All">
+          All
+        </button>
+
+        <button class="filter" data-filter="Hoodies">
+          Hoodies
+        </button>
+
+        <button class="filter" data-filter="T-Shirts">
+          T-Shirts
+        </button>
+
+        <button class="filter" data-filter="Pants">
+          Pants
+        </button>
+
+        <button class="filter" data-filter="Accessories">
+          Accessories
+        </button>
+
       </div>
-      <div class="product-grid" id="productGrid"></div>
+
+      <div
+        class="product-grid"
+        id="productGrid"
+      ></div>
+
     </section>
 
+
+    <!-- =========================
+         MOVEMENT / STORY
+    ========================== -->
     <section class="story" id="story">
+
       <div class="story-image"></div>
+
       <div class="story-copy">
-        <p class="eyebrow">A DIFFERENT<br>STATE OF MIND</p>
-        <h2>OFFLIMIT<br>ISN'T JUST A BRAND.</h2>
-        <p>It's a mindset. For the bold, the creative, the disciplined. Not for everyone.</p>
-        <a class="btn outline" href="#contact">OUR STORY →</a>
+
+        <p class="eyebrow">
+          THE MOVEMENT
+        </p>
+
+        <h2>
+          MORE THAN<br>
+          CLOTHING.
+        </h2>
+
+        <p>
+          OFFLIMIT is built around individuality,
+          movement and the freedom to create your
+          own identity.
+        </p>
+
+        <a class="btn outline" href="#contact">
+          OUR STORY →
+        </a>
+
       </div>
-      <div class="story-symbol"><img src="offlimit-symbol.png" alt=""></div>
+
+      <div class="story-symbol">
+        <img src="offlimit-symbol.png" alt="">
+      </div>
+
     </section>
 
+
+    <!-- =========================
+         MANIFESTO
+    ========================== -->
     <section class="manifesto wrap">
-      <div><span>01</span><h3>DISCIPLINE</h3><p>Build the mindset before the movement.</p></div>
-      <div><span>02</span><h3>DIFFERENT</h3><p>Don't dress to fit the frame.</p></div>
-      <div><span>03</span><h3>FREEDOM</h3><p>Move without permission.</p></div>
+
+      <div>
+        <span>01</span>
+        <h3>DISCIPLINE</h3>
+        <p>
+          Build the mindset before the movement.
+        </p>
+      </div>
+
+      <div>
+        <span>02</span>
+        <h3>DIFFERENT</h3>
+        <p>
+          Don't dress to fit the frame.
+        </p>
+      </div>
+
+      <div>
+        <span>03</span>
+        <h3>FREEDOM</h3>
+        <p>
+          Move without permission.
+        </p>
+      </div>
+
     </section>
 
-    <section class="social wrap">
-      <div class="section-head"><h2>@OFFLIMIT</h2><p>TAG US TO BE FEATURED. #OFFLIMIT</p><a href="#" aria-label="Instagram">FOLLOW ON INSTAGRAM →</a></div>
-      <div class="social-grid">
-        <div class="social-tile s1"></div><div class="social-tile s2"></div><div class="social-tile s3"></div>
-        <div class="social-tile s4"></div><div class="social-tile s5"></div><div class="social-tile s6"></div>
+
+    <!-- =========================
+         LOOKBOOK
+    ========================== -->
+    <section class="lookbook wrap" id="lookbook">
+
+      <div class="lookbook-main">
+
+        <div class="lookbook-image"></div>
+
+        <div class="lookbook-overlay">
+
+          <p class="eyebrow">
+            OFFLIMIT / LOOKBOOK 001
+          </p>
+
+          <h2>
+            BUILT<br>
+            DIFFERENT.
+          </h2>
+
+          <button
+            type="button"
+            class="lookbook-play"
+            aria-label="Play lookbook"
+          >
+            ▶
+          </button>
+
+          <a href="#">
+            WATCH LOOKBOOK →
+          </a>
+
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- =========================
+         SOCIAL
+    ========================== -->
+    <section class="social wrap">
+
+      <div class="section-head">
+
+        <div>
+          <p class="eyebrow">FOLLOW THE MOVEMENT</p>
+          <h2>@OFFLIMIT</h2>
+        </div>
+
+        <a href="#" aria-label="Instagram">
+          FOLLOW ON INSTAGRAM →
+        </a>
+
+      </div>
+
+      <div class="social-grid">
+
+        <div class="social-tile s1"></div>
+        <div class="social-tile s2"></div>
+        <div class="social-tile s3"></div>
+        <div class="social-tile s4"></div>
+        <div class="social-tile s5"></div>
+        <div class="social-tile s6"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SUBSCRIBE
+    ========================== -->
+    <section class="subscribe">
+
+      <div class="subscribe-inner">
+
+        <p class="eyebrow">
+          JOIN THE MOVEMENT
+        </p>
+
+        <h2>
+          STAY OFFLIMIT.
+        </h2>
+
+        <p>
+          Get early access to new drops,
+          exclusive releases and OFFLIMIT updates.
+        </p>
+
+        <form id="newsletterForm">
+
+          <input
+            type="email"
+            placeholder="ENTER YOUR EMAIL"
+            aria-label="Email address"
+            required
+          >
+
+          <button type="submit">
+            →
+          </button>
+
+        </form>
+
+        <small id="newsletterMsg"></small>
+
+      </div>
+
+    </section>
+
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
   <footer id="contact">
+
     <div class="footer-top wrap">
-      <div class="footer-brand"><img src="offlimit-wordmark.png" alt="Offlimit"><p>UNBOUND. UNAPOLOGETIC. DIFFERENT.</p></div>
-      <div><h4>SHOP</h4><a href="#shop">All Products</a><a href="#shop">Hoodies</a><a href="#shop">T-Shirts</a><a href="#shop">Pants</a><a href="#shop">Accessories</a></div>
-      <div><h4>HELP</h4><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Size Guide</a><a href="#">FAQ</a><a href="#contact">Contact</a></div>
-      <div><h4>COMPANY</h4><a href="#story">About</a><a href="#story">Our Story</a><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div>
-      <div class="newsletter"><h4>JOIN THE MOVEMENT</h4><p>Get exclusive access to new drops, offers and more.</p><form id="newsletterForm"><input type="email" placeholder="Your email" required><button>→</button></form><small id="newsletterMsg"></small></div>
+
+      <div class="footer-brand">
+
+        <img
+          src="offlimit-wordmark.png"
+          alt="OFFLIMIT"
+        >
+
+        <p>
+          BEYOND LIMITS.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>SHOP</h4>
+
+        <a href="#shop">All Products</a>
+        <a href="#shop">Hoodies</a>
+        <a href="#shop">T-Shirts</a>
+        <a href="#shop">Bottoms</a>
+        <a href="#shop">Accessories</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>HELP</h4>
+
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Size Guide</a>
+        <a href="#">FAQ</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>COMPANY</h4>
+
+        <a href="#story">About</a>
+        <a href="#story">Our Story</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+
+      </div>
+
+
+      <div class="newsletter">
+
+        <h4>
+          JOIN THE MOVEMENT
+        </h4>
+
+        <p>
+          Get exclusive access to new drops,
+          offers and more.
+        </p>
+
+        <form>
+
+          <input
+            type="email"
+            placeholder="YOUR EMAIL"
+            required
+          >
+
+          <button type="submit">
+            →
+          </button>
+
+        </form>
+
+      </div>
+
     </div>
-    <div class="footer-bottom wrap"><span>© 2026 OFFLIMIT. All rights reserved.</span><span>Designed & developed by Zairo Digital</span></div>
+
+
+    <div class="footer-bottom wrap">
+
+      <span>
+        © 2026 OFFLIMIT. ALL RIGHTS RESERVED.
+      </span>
+
+      <span>
+        NO LIMITS. JUST FORWARD.
+      </span>
+
+    </div>
+
   </footer>
 
-  <aside class="drawer" id="cartDrawer" aria-hidden="true">
-    <div class="drawer-head"><h2>YOUR CART</h2><button data-close="cartDrawer">×</button></div>
-    <div id="cartItems" class="cart-items"></div>
-    <div class="cart-total"><span>TOTAL</span><strong id="cartTotal">$0.00</strong></div>
-    <button class="checkout" id="checkoutBtn">CHECKOUT</button>
-    <p class="cart-note">Demo storefront — connect your preferred payment provider for live checkout.</p>
-  </aside>
-  <div class="drawer-backdrop" id="backdrop"></div>
 
-  <div class="modal" id="productModal" aria-hidden="true">
-    <div class="modal-inner"><button class="modal-close">×</button><img id="modalImg" alt=""><div><p class="eyebrow">OFFLIMIT</p><h2 id="modalName"></h2><p id="modalPrice" class="modal-price"></p><p class="modal-desc">Premium OFFLIMIT streetwear. Select your size and add it to your cart.</p><div class="sizes"><button>S</button><button>M</button><button>L</button><button>XL</button></div><button class="checkout" id="modalAdd">ADD TO CART</button></div></div>
+  <!-- =========================
+       CART DRAWER
+  ========================== -->
+  <aside
+    class="drawer"
+    id="cartDrawer"
+    aria-hidden="true"
+  >
+
+    <div class="drawer-head">
+
+      <h2>YOUR CART</h2>
+
+      <button
+        type="button"
+        data-close="cartDrawer"
+      >
+        ×
+      </button>
+
+    </div>
+
+    <div
+      id="cartItems"
+      class="cart-items"
+    ></div>
+
+    <div class="cart-total">
+
+      <span>TOTAL</span>
+
+      <strong id="cartTotal">
+        $0.00
+      </strong>
+
+    </div>
+
+    <button
+      class="checkout"
+      id="checkoutBtn"
+      type="button"
+    >
+      CHECKOUT
+    </button>
+
+    <p class="cart-note">
+      Demo storefront — connect your preferred
+      payment provider for live checkout.
+    </p>
+
+  </aside>
+
+
+  <div
+    class="drawer-backdrop"
+    id="backdrop"
+  ></div>
+
+
+  <!-- =========================
+       PRODUCT MODAL
+  ========================== -->
+  <div
+    class="modal"
+    id="productModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-inner">
+
+      <button
+        type="button"
+        class="modal-close"
+      >
+        ×
+      </button>
+
+      <img
+        id="modalImg"
+        alt=""
+      >
+
+      <div>
+
+        <p class="eyebrow">
+          OFFLIMIT
+        </p>
+
+        <h2 id="modalName"></h2>
+
+        <p
+          id="modalPrice"
+          class="modal-price"
+        ></p>
+
+        <p class="modal-desc">
+          Premium OFFLIMIT streetwear.
+          Select your size and add it to your cart.
+        </p>
+
+        <div class="sizes">
+
+          <button type="button">S</button>
+          <button type="button">M</button>
+          <button type="button">L</button>
+          <button type="button">XL</button>
+
+        </div>
+
+        <button
+          class="checkout"
+          id="modalAdd"
+          type="button"
+        >
+          ADD TO CART
+        </button>
+
+      </div>
+
+    </div>
+
   </div>
+
+
   <script src="script.js"></script>
+
 </body>
 </html>
